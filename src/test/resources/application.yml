@@ -1,0 +1,14 @@
+server:
+  port: 6666
+spring:
+  application:
+    name: mingyuan-ai
+  cloud:
+    config:
+      enabled: false
+#  main:
+#    allow-bean-definition-overriding: true
+# 你的apiKey
+kimi:
+  client:
+    api-key: sk-kN2nMBLXd3he7ruY5InPdEFBVmVnpo8RPAf5V5XD3ATXQIOc
