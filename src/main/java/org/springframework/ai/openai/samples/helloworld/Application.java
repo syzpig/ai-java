@@ -4,7 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
-@ComponentScan(basePackages = {"com.gwb.util","org.springframework.ai.openai.samples.*","org.springframework.ai.*"})
+@ComponentScan(basePackages = {"com.gwb.util","org.springframework.ai.openai.samples.*","org.springframework.ai.*","import dev.langchain4j.service.spring.*"})
 @SpringBootApplication
 public class Application {
 

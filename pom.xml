@@ -26,6 +26,15 @@
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
+			<!-- 导入LangChain4j的BOM，以确保所有与LangChain4j相关的依赖版本一致。这有助于集中管理依赖版本，防止版本冲突。 -->
+			<dependency>
+				<groupId>dev.langchain4j</groupId>
+				<artifactId>langchain4j-bom</artifactId>
+				<version>0.35.0</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+
 		</dependencies>
 	</dependencyManagement>
 
@@ -55,11 +64,11 @@
 			<scope>test</scope>
 		</dependency>
 
-		<dependency>
-			<groupId>org.springframework.ai</groupId>
-			<artifactId>spring-ai-minimax-spring-boot-starter</artifactId>
-			<version>1.0.0-SNAPSHOT</version>
-		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>org.springframework.ai</groupId>-->
+<!--			<artifactId>spring-ai-minimax-spring-boot-starter</artifactId>-->
+<!--			<version>1.0.0-SNAPSHOT</version>-->
+<!--		</dependency>-->
 <!--		千帆-->
 <!--		<dependency>-->
 <!--			<groupId>org.springframework.ai</groupId>-->
@@ -72,6 +81,40 @@
 			<artifactId>auth</artifactId>
 			<version>2.3.2</version> <!-- 请根据需要选择合适的版本 -->
 		</dependency>
+
+
+
+<!--       langchain4j-->
+		<!-- 添加LangChain4j的OpenAI库，用于通过LangChain4j与OpenAI的语言模型进行交互。该依赖提供了与OpenAI API通信所需的类和方法。 -->
+		<dependency>
+			<groupId>dev.langchain4j</groupId>
+			<artifactId>langchain4j-open-ai</artifactId>
+			<version>1.0.0-beta1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>dev.langchain4j</groupId>
+			<artifactId>langchain4j</artifactId>
+			<version>1.0.0-beta1</version>
+		</dependency>
+		<dependency>
+			<groupId>dev.langchain4j</groupId>
+			<artifactId>langchain4j-embeddings-all-minilm-l6-v2</artifactId>
+			<version>1.0.0-beta1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.tinylog</groupId>
+			<artifactId>tinylog-impl</artifactId>
+			<version>2.6.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.tinylog</groupId>
+			<artifactId>slf4j-tinylog</artifactId>
+			<version>2.6.2</version>
+		</dependency>
+<!--		lanchain end-->
+
 	</dependencies>
 
 	<build>
@@ -87,6 +130,8 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
+
+
 	</build>
 
 
